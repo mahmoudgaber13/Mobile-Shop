@@ -1,0 +1,26 @@
+<div class="container mt-5">
+    <h3 style="text-align: center; color: blanchedalmond;">
+        New Product
+    </h3>
+    <form ngForm="form" (submit)="addProduct()">
+        <div class="form-group">
+            <label for="pName">Name :</label>
+            <input  name="Name" id="pName" [(ngModel)]="prdService.product.Name" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label for="pPrice">Price:</label>
+            <input name="Price" type="number" id="pPrice"  [(ngModel)]="prdService.product.Price" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label for="pCategory">Category :</label>
+            <input name="Category" id="pCategory" [(ngModel)]="prdService.product.Category" class="form-control"/>
+        </div>
+        <button type="submit" class="btn btn-success">
+            Add
+        </button>
+        <button class="btn btn-danger" (click)="goBack()">
+            Back
+        </button>
+    
+    </form>
+</div>

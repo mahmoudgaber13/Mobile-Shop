@@ -1,0 +1,29 @@
+<div class="col-md-4 col-md-offset-4" id="login">
+    <section id="inner-wrapper bg-dark" class="login">
+        <article>
+            <h3 style="color: blanchedalmond;">Registration</h3>
+            <form (submit)="regUser()">
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon bg-dark mr-1"><i class="fa fa-user"> </i></span>
+                        <input required class="form-control" name="Name" [(ngModel)]="accService.acc.Name" placeholder="Name">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon bg-dark mr-1"><i class="fa fa-key"> </i></span>
+                        <input required type="password" name="Password" [(ngModel)]="accService.acc.Password" class="form-control" placeholder="Password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon bg-dark mr-1"><i class="fa fa-key"> </i></span>
+                        <input required type="password" name="ConfirmPassword" [(ngModel)]="accService.acc.ConfirmPassword" class="form-control" placeholder="Confirm Password">
+                    </div>
+                </div>
+                  <button type="submit" class="btn btn-success btn-block">Submit</button>
+            </form>
+        </article>
+    </section>
+</div>

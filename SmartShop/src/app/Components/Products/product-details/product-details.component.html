@@ -1,0 +1,43 @@
+
+
+  <div class="container">
+    <h3 class="h3" style="color: blanchedalmond;">{{prd.Name}} </h3>
+    <div class="row" >
+        <div class="mx-auto col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" [src]="'assets/cart2.jpg'">
+                        <img class="pic-2" [src]="'assets/cart.png'">
+                    </a>
+                    <ul class="social">
+                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a data-tip="Add to Cart" (click)="addToCart(prd)"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <span class="product-new-label">Sale</span>
+                    <span class="product-discount-label">20%</span>
+                </div>
+                <ul class="rating bg-dark" >
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                </ul>
+                <br><br>
+                <div class="product-content bg-dark">
+                    <h3 class="title"><a >{{prd.Name}}</a></h3>
+                    <div class="price" style="color: blanchedalmond;">${{prd.Price}}
+                        <span>${{prd.Price+(20/100*prd.Price)}}</span>
+                    </div>
+                    <button class="btn btn-danger " (click)="goBack()">Back</button>
+                    <br><br>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<hr>
+
